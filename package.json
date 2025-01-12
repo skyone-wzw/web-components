@@ -1,0 +1,42 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "author": "skyone-wzw",
+  "scripts": {
+    "start": "cross-env NODE_ENV=developemnt webpack serve --config scripts/develop.webpack.js",
+    "build": "cross-env NODE_ENV=production webpack --config scripts/build.webpack.js"
+  },
+  "dependencies": {
+    "core-js": "^3.40.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@types/webpack-env": "^1.18.5",
+    "babel-loader": "^9.2.1",
+    "browserslist": "^4.24.4",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "dotenv": "^16.4.7",
+    "html-minifier-terser": "^7.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.11",
+    "ts-loader": "^9.5.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-merge": "^6.0.1",
+    "webpackbar": "^7.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}
