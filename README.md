@@ -33,6 +33,7 @@ The `dist/web-components.html` should be inserted into your html `<head>` tag.
 
 ```bash
 cp public/index.html.example public/index.html
+cp .env.example .env
 npm run start
 ```
 
