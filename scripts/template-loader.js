@@ -1,6 +1,12 @@
 const path = require("path");
 const htmlMinifier = require("html-minifier-terser");
 
+/**
+ * A Webpack loader that minifies and parses HTML template files.
+ *
+ * @this {import("webpack").loader.LoaderContext}
+ * @param source {string} The source code of the template file.
+ */
 module.exports = function (source) {
     this.cacheable && this.cacheable();
     this.async();
@@ -39,7 +45,16 @@ if (!template) {
 export default template;
     `.trim();
 
-        this.callback(null, code);
+        const sourceMap = {
+            version: 3,
+            sources: [resourcePath],
+            mappings: "",
+            file: this.resourcePath,
+            sourcesContent: [source],
+            names: [],
+        }
+
+        this.callback(null, code, sourceMap);
     }).catch((error) => {
         this.emitError(new Error(`Error minifying template in ${resourcePath}: ${error.message}`));
     });
